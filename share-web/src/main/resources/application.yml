@@ -1,0 +1,29 @@
+#application name
+spring:
+  application:
+    name: share-lift
+  profiles:
+    active: dev
+  thymeleaf: #thymeleaf配置
+    suffix: .html
+    encoding: utf-8
+    cache: false
+  servlet: #文件上传配置
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 20MB
+
+#config server
+server:
+  port: 8080
+  servlet:
+    context-path: /share
+
+#config mybatis
+mybatis:
+  type-aliases-package: com.dm.**.domain
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mapper/**/*Mapper.xml
+
+#config shiro

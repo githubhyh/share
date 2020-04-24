@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dm.mapper.system.user.SysUserMapper">
+    <resultMap id="SysUserResult" type="com.dm.domain.system.user.SysUser">
+        <result property="id" column="user_id"/>
+        <result property="name" column="user_name"/>
+        <result property="password" column="password"/>
+        <result property="loginName" column="login_name"/>
+        <result property="email" column="email"/>
+        <result property="phoneNumber" column="phonenumber"/>
+        <result property="gender" column="gender"/>
+        <result property="status" column="status"/>
+        <result property="lastLoginIp" column="last_login_ip"/>
+        <result property="lastLoginDate" column="last_login_date"/>
+        <result property="ip" column="login_ip"/>
+        <result property="loginDate" column="login_date"/>
+        <result property="createTime" column="create_time"/>
+        <result property="createBy" column="create_by"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="remark" column="remark"/>
+    </resultMap>
+
+    <sql id="findSql">
+        select * from sys_user
+    </sql>
+
+    <!-- 插入一条数据 -->
+    <insert id="addUser" parameterType="com.dm.domain.system.user.SysUser">
+        insert into sys_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null and id != 0">user_id,</if>
+            <if test="name != null and name != ''">user_name,</if>
+            <if test="password != null and password != ''">password,</if>
+            <if test="loginName != null and loginName != ''">login_name,</if>
+            <if test="email != null and email != ''">email,</if>
+            <if test="phoneNumber != null and phoneNumber != ''">phonenumber,</if>
+            <if test="gender != null">gender,</if>
+            <if test="status != null and status != ''">status,</if>
+            <if test="lastLoginIp != null and lastLoginIp != ''">last_login_ip,</if>
+            <if test="lastLoginDate != null">last_login_date,</if>
+            <if test="ip != null and ip != ''">login_ip,</if>
+            <if test="loginDate != null">login_date,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="createBy != null and createBy != ''">create_by,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="updateBy != null and updateBy != ''">update_by,</if>
+            <if test="remark != null and remark != ''">remark,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null and id != 0">#{id},</if>
+            <if test="name != null and name != ''">#{name},</if>
+            <if test="password != null and password != ''">#{password},</if>
+            <if test="loginName != null and loginName != ''">#{loginName},</if>
+            <if test="email != null and email != ''">#{email},</if>
+            <if test="phoneNumber != null and phoneNumber != ''">#{phoneNumber},</if>
+            <if test="gender != null">#{gender},</if>
+            <if test="status != null and status != ''">#{status},</if>
+            <if test="lastLoginIp != null and lastLoginIp != ''">#{lastLoginIp},</if>
+            <if test="lastLoginDate != null">#{lastLoginDate},</if>
+            <if test="ip != null and ip != ''">#{ip},</if>
+            <if test="loginDate != null">#{loginDate},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="createBy != null and createBy != ''">#{createBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="updateBy != null and updateBy != ''">#{updateBy},</if>
+            <if test="remark != null and remark != ''">#{remark},</if>
+        </trim>
+    </insert>
+
+    <!-- find by user name -->
+    <select id="findByLoginName" parameterType="java.lang.String" resultMap="SysUserResult">
+        select * from sys_user where login_name = #{name}
+    </select>
+</mapper>

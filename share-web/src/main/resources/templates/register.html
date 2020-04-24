@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ch" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+</head>
+<body>
+<center>
+    <form action="" onsubmit="return false" method="post" id = "registerForm">
+        昵称：
+        <input th:type="text" th:name="name" th:id="name"/><br>
+        登录名：
+        <input th:type="text" th:name="loginName" th:id="loginName"/><br>
+        密码：
+        <input th:type="password" th:name="password" th:id="password"/><br>
+        确认密码：
+        <input th:type="password" th:name="repeatPass" th:id="repeatPass"/><br>
+        性别：
+        <input type="radio" th:name="gender" th:id="gender" th:value="true"/>
+        <input type="radio" th:name="gender" th:id="gender" th:value="false"/><br>
+        邮箱：
+        <input th:type="email" th:name="email" th:id="email"/><br>
+        电话号码：
+        <input th:type="text" th:name="phoneNumber" th:id="phoneNumber"/><br>
+        <input th:type="submit" th:value="submit"/>
+    </form>
+</center>
+
+<!-- 引入脚本 -->
+<script th:src="@{/js/jquery-3.4.1.js}"></script>
+<script th:inline="javascript">
+    var ctx = [[@{/}]];
+    $(function () {
+        $("#registerForm").submit(function (form) {
+            $.ajax({
+                type: "post",
+                url: ctx + "sysUser/add",
+                dataType: "json",
+                data: $("#registerForm").serialize(),
+                success: function (result) {
+                    if (result.auth == true) {
+                        alert(result.msg);
+                        location.href = ctx + "login";
+                    }else {
+                        alert(result.msg);
+                        location.href = ctx + "sysUser/register";
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

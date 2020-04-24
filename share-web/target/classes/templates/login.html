@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ch" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+   <!-- <link th:href="@{/css/bootstrap.css}" rel="stylesheet"/>
+    <link th:href="@{/css/bootstrap-theme.css}" rel="stylesheet"/>-->
+</head>
+<body>
+<center>
+    <div>
+        <form action="" onsubmit="return false" method="post" id="loginForm">
+            <input type="text" name="loginName" id = "name" autocomplete="off"/><br>
+            <input type="password" name="password" id="password" autocomplete="off"/><br>
+            <input type="email" name="email" id="email" autocomplete="off"/><br>
+            <input type="submit" value="提交"/>
+        </form>
+    </div>
+    <div>
+        <a href="javascript:void(0)" title="注册" onclick="register()">点击注册</a>
+        <button name="test" id="ajaxTest" value="test ajax" onclick="test('ajaxTest')"></button>
+    </div>
+</center>
+
+<script th:inline="javascript">var ctx = [[@{/}]];</script>
+<script th:src="@{/js/jquery-3.4.1.js}"></script>
+<script th:inline="javascript">
+    $(function () {
+        $("#loginForm").submit(function (e) {
+            $.ajax({
+                type: "POST",
+                url: "./login",
+                dataType: "JSON",
+                data: $("#loginForm").serialize(),
+                success: function (r) {
+                    if (r.auth == true) {
+                        alert(r.msg);
+                        location.href = "./sysUser/view";
+                    }else {
+                        location.href = "./login";
+                        alert(r.msg);
+                    }
+                }
+            });
+        });
+
+        function loginSubmit() {
+            $.ajax({
+                type: "POST",
+                url: "./doLogin",
+                dataType: "JSON",
+                data: $("#loginForm").serialize(),
+                success: function (token) {
+                    if (token.auth == true) {
+                        location.href = "/";
+                    }else {
+                        location.href = "/login";
+                    }
+                }
+            });
+        }
+    });
+
+    function test(data) {
+        location.href = "./testpage";
+    }
+    
+    function register(id) {
+        location.href = ctx + "sysUser/register";
+    }
+</script>
+</body>
+</html>
