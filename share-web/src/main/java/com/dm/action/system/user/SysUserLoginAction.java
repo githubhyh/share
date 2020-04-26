@@ -2,8 +2,12 @@ package com.dm.action.system.user;
 
 import com.dm.action.BaseAction;
 import com.dm.beans.AuthToken;
+import com.dm.common.GlobalConstant;
 import com.dm.domain.system.user.SysUser;
 import com.dm.service.system.user.ISysUserService;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +34,11 @@ public class SysUserLoginAction extends BaseAction {
     @PostMapping("/login")
     @ResponseBody
     public AuthToken login(SysUser user, HttpServletRequest request) {
-        AuthToken login = sysUserService.login(user);
-        return login;
+        UsernamePasswordToken token = new UsernamePasswordToken();
+        token.setUsername(user.getLoginName());
+        token.setPassword(user.getPassword().toCharArray());
+        Subject subject = SecurityUtils.getSubject();
+        subject.login(token);
+        return AuthToken.auth(GlobalConstant.LOGIN_SUCCESS);
     }
 }

@@ -2,6 +2,7 @@ package com.dm.mapper.system.user;
 
 import com.dm.domain.system.user.SysUser;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
 import java.math.BigInteger;
 import java.util.Collection;
@@ -11,6 +12,7 @@ import java.util.List;
  * @author hu.yuhao
  * 用户mapper
  * */
+@Component
 public interface SysUserMapper {
     int addUser(SysUser uer);
 

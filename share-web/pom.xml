@@ -37,6 +37,12 @@
       <artifactId>share-service</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
+
+    <dependency>
+      <groupId>com.dm</groupId>
+      <artifactId>share-framework</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 
   <build>

@@ -20,10 +20,14 @@ server:
   servlet:
     context-path: /share
 
+logging:
+  level:
+    com.dm.mapper: debug
+
 #config mybatis
 mybatis:
   type-aliases-package: com.dm.**.domain
   config-location: classpath:mybatis/mybatis-config.xml
-  mapper-locations: classpath:mapper/**/*Mapper.xml
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
 
 #config shiro

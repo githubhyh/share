@@ -33,12 +33,12 @@
                 dataType: "JSON",
                 data: $("#loginForm").serialize(),
                 success: function (r) {
-                    if (r.auth == true) {
-                        alert(r.msg);
+                    if (r.auth == '1') {
+                        alert(r.message);
                         location.href = "./sysUser/view";
                     }else {
                         location.href = "./login";
-                        alert(r.msg);
+                        alert(r.message);
                     }
                 }
             });

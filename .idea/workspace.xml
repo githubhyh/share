@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5bec4ee-436b-4935-a1a4-18de60a2f1ec" name="Default Changelist" comment="" />
+    <list default="true" id="a5bec4ee-436b-4935-a1a4-18de60a2f1ec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-common/src/main/java/com/dm/common/GlobalConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-common/src/main/java/com/dm/common/GlobalConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-common/target/classes/META-INF/sharecommon.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-common/target/classes/com/dm/common/GlobalConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/share-common/target/classes/com/dm/common/GlobalConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-framework/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/share-framework/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-service/src/main/java/com/dm/mapper/system/user/SysUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/src/main/java/com/dm/mapper/system/user/SysUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-service/target/classes/com/dm/mapper/system/user/SysUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/target/classes/com/dm/mapper/system/user/SysUserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-web/src/main/java/com/dm/SpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/src/main/java/com/dm/SpringApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-web/src/main/java/com/dm/action/system/user/SysUserLoginAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/src/main/java/com/dm/action/system/user/SysUserLoginAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-web/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-web/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-web/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-web/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-web/target/classes/com/dm/SpringApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/target/classes/com/dm/SpringApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-web/target/classes/com/dm/action/system/user/SysUserLoginAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/target/classes/com/dm/action/system/user/SysUserLoginAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-web/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/target/classes/templates/login.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +35,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -30,19 +53,27 @@
     </option>
   </component>
   <component name="ProjectId" id="1ayUTkDGrqgosCqHsNMBIgo8vRu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/share-web/src/main/resources/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/share-framework/src/main/java/com/dm/utils" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\idea-workspace\share\share-web\src\main\resources\templates" />
-      <recent name="D:\idea-workspace\share\share-common\src\main\java\com\dm\enums" />
-      <recent name="D:\idea-workspace\share\share-common\src\main\java\com\dm\utils" />
-      <recent name="D:\idea-workspace\share\share-service\src\main\java\com\dm\service\system\user\impl" />
-      <recent name="D:\idea-workspace\share\share-service\src\main\java\com\dm\service\system\user" />
+      <recent name="D:\idea-workspace\share\share-framework\src\main\java\com\dm\utils" />
+      <recent name="D:\idea-workspace\share\share-framework\src\main\java\com\dm\filter" />
+      <recent name="D:\idea-workspace\share\share-framework\src\main\java\com\dm\config" />
+      <recent name="D:\idea-workspace\share\share-framework\src\main\java\com\dm\shiro" />
+      <recent name="D:\idea-workspace\share\share-common\src\main\java\com\dm\exception\runtime" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -101,11 +132,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587707336180</updated>
-      <workItem from="1587707339048" duration="12505000" />
+      <workItem from="1587707339048" duration="21690000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

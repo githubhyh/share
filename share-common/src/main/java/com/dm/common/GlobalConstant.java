@@ -14,4 +14,14 @@ public class GlobalConstant {
     public static String LOGIN_ACCOUNT_LOCKED          =   "账户已被锁定";
     public static String LOGIN_ROLE_LOCKED             =   "角色已被锁定";
     public static String LOGIN_ACCOUNT_INVALID          =   "非法账户";
+
+    //数据验证
+    public static String VALIDATE_LOGIN_INFO_ILLEGAL    =   "the data is illegal";
+    public static String VALIDATE_LOGIN_INFO_ERROR      =   "check the login information";
+    public static String VALIDATE_REGISTER_INFO_ILLEGAL =   "check the registering information";
+    public static String VALIDATE_ILLEGAL               =   "数据验证失败，请检查输入数据";
+
+
+    //shiro session redis key prefix
+    public static String PREFIX_OF_REDIS_SESSION_KEY    =   "SHIRO_REDIS_SESSION_KEY:";
 }
