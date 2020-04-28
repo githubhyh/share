@@ -4,6 +4,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
@@ -12,7 +13,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @SpringBootApplication
 @EnableTransactionManagement
-@MapperScan("com.dm.mapper")
+@EnableAspectJAutoProxy(proxyTargetClass = true)
+@MapperScan({"com.dm.mapper"})
 public class SpringApplication {
     private static final Logger logger = LoggerFactory.getLogger(SpringApplication.class);
     public static void main( String[] args ) {

@@ -7,7 +7,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class SysIndexAction extends BaseAction {
     @GetMapping("/")
-    public String index() {
+    public String root() {
         return "login";
+    }
+
+    @GetMapping("/index")
+    public String index() {
+        return "index";
     }
 }

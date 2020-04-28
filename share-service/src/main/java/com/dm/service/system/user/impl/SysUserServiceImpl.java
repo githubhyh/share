@@ -1,11 +1,9 @@
 package com.dm.service.system.user.impl;
 
-import com.alibaba.fastjson.JSONObject;
 import com.dm.beans.AuthToken;
 import com.dm.common.GlobalConstant;
 import com.dm.domain.system.user.SysUser;
 import com.dm.enums.AccountType;
-import com.dm.exception.runtime.NoSuchTypeException;
 import com.dm.utils.MD5;
 import com.dm.enums.MD5ProcessType;
 import com.dm.mapper.system.user.SysUserMapper;
@@ -14,6 +12,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 import java.math.BigInteger;
 import java.util.Collection;
@@ -32,9 +32,12 @@ public class SysUserServiceImpl implements ISysUserService {
      * @param uer 待添加对象
      * @return int  添加成功条数
      */
+    @Transactional
     @Override
     public int addUser(SysUser uer) {
-        return userMapper.addUser(uer);
+        int i = userMapper.addUser(uer);
+        int j = 1/0;
+        return i;
     }
 
     /**
@@ -108,6 +111,7 @@ public class SysUserServiceImpl implements ISysUserService {
      * @param name name
      * @return SysUser 满足条件对象
      */
+    @Transactional
     @Override
     public SysUser findByLoginName(String name) {
         return userMapper.findByLoginName(name);
@@ -152,16 +156,16 @@ public class SysUserServiceImpl implements ISysUserService {
      * @param user 用户注册信息
      * @return AuthToken    注册信息
      */
+    @Transactional
     @Override
-    public AuthToken register(SysUser user) throws NoSuchTypeException {
+    public AuthToken register(SysUser user) {
         SysUser sysUser = findByLoginName(user.getLoginName());
         //null 为没有同名注册，执行注册
         if (sysUser == null) {
             user.setPassword(MD5.MD5WithSalt(null, user.getPassword(), MD5ProcessType.REGISTER));
             int i = addUser(user);
             if (i > 0) {
-                throw new NoSuchTypeException("test");
-                //return AuthToken.auth("注册成功", null);
+                return AuthToken.auth("注册成功", null);
             } else {
                 return AuthToken.unauth("注册失败", null);
             }

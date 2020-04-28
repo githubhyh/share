@@ -3,70 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title>登录</title>
-   <!-- <link th:href="@{/css/bootstrap.css}" rel="stylesheet"/>
-    <link th:href="@{/css/bootstrap-theme.css}" rel="stylesheet"/>-->
+    <link href="./css/bootstrap.css" rel="stylesheet"/>
+    <link th:href="@{/css/bootstrap-theme.css}" rel="stylesheet"/>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 </head>
 <body>
-<center>
-    <div>
-        <form action="" onsubmit="return false" method="post" id="loginForm">
-            <input type="text" name="loginName" id = "name" autocomplete="off"/><br>
-            <input type="password" name="password" id="password" autocomplete="off"/><br>
-            <input type="email" name="email" id="email" autocomplete="off"/><br>
-            <input type="submit" value="提交"/>
-        </form>
+<div class="container">
+    <div class = "d-flex justify-content-center">
+        <div class="card float-right" style="width: 45rem;margin-top: 20%;float: right">
+            <div class="card-body">
+                <form action="" method="post" onsubmit="return false" id="loginForm">
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">账号：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputEmail3" name = "loginName" placeholder="登录名/邮箱/手机号">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputPassword3" class="col-sm-2 col-form-label">密码：</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword3" name="password">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck1" name="rememberMe">
+                                <label class="form-check-label" for="gridCheck1">
+                                    记住我
+                                </label>
+                                <a href="javascript:void(0)" class="card-link" style="margin-left: 15px;">忘记密码？</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                            <button class="btn btn-secondary" onclick="register()">Sign up</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div>
-        <a href="javascript:void(0)" title="注册" onclick="register()">点击注册</a>
-        <button name="test" id="ajaxTest" value="test ajax" onclick="test('ajaxTest')"></button>
-    </div>
-</center>
-
+</div>
 <script th:inline="javascript">var ctx = [[@{/}]];</script>
 <script th:src="@{/js/jquery-3.4.1.js}"></script>
+<script th:src="@{/js/bootstrap.js}"></script>
 <script th:inline="javascript">
     $(function () {
         $("#loginForm").submit(function (e) {
             $.ajax({
                 type: "POST",
-                url: "./login",
+                url: ctx + "login",
                 dataType: "JSON",
                 data: $("#loginForm").serialize(),
                 success: function (r) {
-                    if (r.auth == '1') {
-                        alert(r.message);
-                        location.href = "./sysUser/view";
+                    if (r.type == 'AUTH') {
+                        location.href = ctx + "index";
                     }else {
-                        location.href = "./login";
-                        alert(r.message);
+                        location.href = ctx + "login";
                     }
                 }
             });
         });
-
-        function loginSubmit() {
-            $.ajax({
-                type: "POST",
-                url: "./doLogin",
-                dataType: "JSON",
-                data: $("#loginForm").serialize(),
-                success: function (token) {
-                    if (token.auth == true) {
-                        location.href = "/";
-                    }else {
-                        location.href = "/login";
-                    }
-                }
-            });
-        }
     });
-
-    function test(data) {
-        location.href = "./testpage";
-    }
     
     function register(id) {
-        location.href = ctx + "sysUser/register";
+        location.href = ctx + "user/register";
     }
 </script>
 </body>

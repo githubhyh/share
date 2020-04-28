@@ -9,6 +9,7 @@ public class SysUser extends BaseEntity {
     private BigInteger id;
     private String name;
     private String password;
+    private String repeatPassword;
     private String loginName;
     private String email;
     private String phoneNumber;
@@ -46,6 +47,14 @@ public class SysUser extends BaseEntity {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getRepeatPassword() {
+        return repeatPassword;
+    }
+
+    public void setRepeatPassword(String repeatPassword) {
+        this.repeatPassword = repeatPassword;
     }
 
     public String getLoginName() {
