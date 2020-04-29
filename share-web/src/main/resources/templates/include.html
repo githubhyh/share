@@ -1,0 +1,25 @@
+<html lang="ch" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="header(title)">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!--/*@thymesVar id="title" type=""*/-->
+    <title th:text="${title}"></title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet"/>
+    <link th:href="@{/css/bootstrap-theme.css}" rel="stylesheet"/>
+    <link th:href="@{/css/layui.css}" rel="stylesheet"/>
+    <link th:href="@{/js/css/modules/code.css}" rel="stylesheet"/>
+    <link th:href="@{/js/css/modules/laydate/default/laydate.css?v=5.0.9}" rel="stylesheet"/>
+    <link th:href="@{/js/css/modules/layer/default/layer.css?v=3.1.1}" rel="stylesheet"/>
+</head>
+
+<!-- 通用js -->
+<div th:fragment="footer">
+    <script th:src="@{/js/jquery-3.4.1.js}"></script>
+    <script th:src="@{/js/bootstrap.js}"></script>
+    <script th:src="@{/js/layui.all.js}"></script>
+    <script th:src="@{/js/jquery.blockUI.js}"></script>
+    <script th:inline="javascript">var ctx = [[@{/}]];</script>
+</div>

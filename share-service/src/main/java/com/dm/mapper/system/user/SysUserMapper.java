@@ -30,5 +30,19 @@ public interface SysUserMapper {
 
     SysUser findByLoginName(@Param("name") String name);
 
+    /**
+     * 邮箱登录
+     * */
+    SysUser findByEmail(@Param("email") String email);
+
+    /**
+     * 手机号查找
+     * */
+    SysUser findByPhoneNumber(@Param("phoneNumber") String phoneNumber);
+
+    /**
+     * unique
+     * */
+    SysUser findUnique(@Param("uniqueParam") String uniqueParam);
     //...
 }

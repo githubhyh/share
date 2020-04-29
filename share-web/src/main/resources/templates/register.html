@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="ch" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>用户注册</title>
-    <link th:href="@{/css/bootstrap.css}" rel="stylesheet"/>
-    <link th:href="@{/css/bootstrap-theme.css}" rel="stylesheet"/>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" th:href="@{../favicon.ico}"/>
+    <th:block th:include="include :: header('用户注册')"/>
 </head>
 <body>
 <div class="container">
@@ -54,7 +50,7 @@
                     <div class="form-group row">
                         <div class="col-sm-10">
                             <button type="submit" class="btn btn-primary">Sign up</button>
-                            <a href="javascript:void(0)" class="card-link" style="margin-left: 15px;">已有账号？</a>
+                            <a href="javascript:void(0)" class="card-link" style="margin-left: 15px;" onclick="gotoLogin()">已有账号？</a>
                         </div>
                     </div>
                 </form>
@@ -62,29 +58,36 @@
         </div>
     </div>
 </div>
-<script th:src="@{/js/jquery-3.4.1.js}"></script>
-<script th:src="@{/js/bootstrap.js}"></script>
+<th:block th:include="include :: footer"/>
 <script th:inline="javascript">
-    var ctx = [[@{/}]];
+    var layer = layui.layer;
     $(function () {
         $("#registerForm").submit(function (form) {
+            var loader = layer.load(1);
+            layer.title('正在注册......', loader);
             $.ajax({
                 type: "post",
                 url: ctx + "user/add",
                 dataType: "json",
                 data: $("#registerForm").serialize(),
                 success: function (result) {
-                    if (result.auth == true) {
-                        alert(result.msg);
+                    if (result.type == 'AUTH') {
+                        layer.close(loader);
+                        alert(result.message);
                         location.href = ctx + "login";
                     }else {
-                        alert(result.msg);
-                        location.href = ctx + "sysUser/register";
+                        layer.close(loader);
+                        alert(result.message);
+                        //location.href = ctx + "user/register";
                     }
                 }
             });
         });
     });
+
+    function gotoLogin() {
+        location.href = ctx + "login";
+    }
 </script>
 
 </body>

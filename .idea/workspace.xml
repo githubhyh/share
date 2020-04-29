@@ -3,26 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="a5bec4ee-436b-4935-a1a4-18de60a2f1ec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-framework/src/main/java/com/dm/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-framework/src/main/java/com/dm/config/ShiroConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-framework/target/classes/com/dm/config/ShiroConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/share-framework/target/classes/com/dm/config/ShiroConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-service/src/main/java/com/dm/domain/system/user/SysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/src/main/java/com/dm/domain/system/user/SysUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-service/src/main/java/com/dm/mapper/system/user/SysUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/src/main/java/com/dm/mapper/system/user/SysUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-service/src/main/java/com/dm/service/system/user/ISysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/src/main/java/com/dm/service/system/user/ISysUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-service/src/main/java/com/dm/service/system/user/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/src/main/java/com/dm/service/system/user/impl/SysUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-service/target/classes/com/dm/domain/system/user/SysUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/target/classes/com/dm/domain/system/user/SysUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-service/src/main/resources/mapper/system/user/SysUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/src/main/resources/mapper/system/user/SysUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-service/target/classes/META-INF/shareservice.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-service/target/classes/com/dm/service/system/user/ISysUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/target/classes/com/dm/service/system/user/ISysUserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-service/target/classes/com/dm/service/system/user/impl/SysUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/target/classes/com/dm/service/system/user/impl/SysUserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-web/src/main/java/com/dm/SpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/src/main/java/com/dm/SpringApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-web/src/main/java/com/dm/action/system/user/SysIndexAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/src/main/java/com/dm/action/system/user/SysIndexAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-web/src/main/java/com/dm/action/system/user/SysUserAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/src/main/java/com/dm/action/system/user/SysUserAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-web/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-web/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/src/main/resources/logback.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-web/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-web/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-web/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/src/main/resources/templates/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-web/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/target/classes/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-web/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-web/target/classes/com/dm/SpringApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/target/classes/com/dm/SpringApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-web/target/classes/com/dm/action/system/user/SysIndexAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/target/classes/com/dm/action/system/user/SysIndexAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-web/target/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/target/classes/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-web/target/classes/com/dm/action/system/user/SysUserAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/target/classes/com/dm/action/system/user/SysUserAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-web/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/target/classes/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-web/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/target/classes/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-web/target/classes/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/target/classes/templates/register.html" afterDir="false" />
@@ -38,6 +35,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -63,6 +61,7 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -70,7 +69,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/share-web/src/main/resources/static/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/share-web/src/main/resources/static/js" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
@@ -78,12 +77,16 @@
       <recent name="D:\idea-workspace\share\share-web\src\main\resources\static" />
       <recent name="D:\idea-workspace\share\share-web\src\main\resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.dm.validate" />
+      <recent name="com.dm.core" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\idea-workspace\share\share-web\src\main\resources\static\css" />
       <recent name="D:\idea-workspace\share\share-web\src\main\resources\static\js" />
-      <recent name="D:\idea-workspace\share\share-framework\src\main\java\com\dm\utils" />
-      <recent name="D:\idea-workspace\share\share-framework\src\main\java\com\dm\filter" />
-      <recent name="D:\idea-workspace\share\share-framework\src\main\java\com\dm\config" />
+      <recent name="D:\idea-workspace\share\share-web\src\main\resources\static\js\css\modules\layer\default" />
+      <recent name="D:\idea-workspace\share\share-web\src\main\resources\static\js\css\modules" />
+      <recent name="D:\idea-workspace\share\share-web\src\main\resources\static\js\css\modules\laydate\default" />
+      <recent name="D:\idea-workspace\share\share-web\src\main\resources\static\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -142,7 +145,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587707336180</updated>
-      <workItem from="1587707339048" duration="47159000" />
+      <workItem from="1587707339048" duration="71394000" />
     </task>
     <servers />
   </component>

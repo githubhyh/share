@@ -32,7 +32,7 @@
                                 <label class="form-check-label" for="gridCheck1">
                                     记住我
                                 </label>
-                                <a href="javascript:void(0)" class="card-link" style="margin-left: 15px;">忘记密码？</a>
+                                <a href="javascript:void(0)" class="card-link" style="margin-left: 15px;" onclick="findPasswd()">忘记密码？</a>
                             </div>
                         </div>
                     </div>
@@ -71,6 +71,10 @@
     
     function register(id) {
         location.href = ctx + "user/register";
+    }
+
+    function findPasswd() {
+        window.open("http://127.0.0.1:8080/share/user/findPasswd", "_blank");
     }
 </script>
 </body>

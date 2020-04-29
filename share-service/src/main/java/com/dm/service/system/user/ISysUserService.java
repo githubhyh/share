@@ -78,5 +78,10 @@ public interface ISysUserService {
      * @param user  用户注册信息
      * @return AuthToken    注册信息
      * */
-    AuthToken register(SysUser user) throws NoSuchTypeException;
+    AuthToken register(SysUser user);
+
+    /**
+     * 用户登录服务
+     * */
+    AuthToken login(String uniqueParam);
 }

@@ -1,5 +1,6 @@
 package com.dm.config;
 
+import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
 import com.dm.filter.LogoutFilter;
 import com.dm.shiro.RedisSessionDao;
 import com.dm.shiro.realm.UserRealm;
@@ -56,6 +57,8 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/login", "anon");
         filterChainDefinitionMap.put("/user/register", "anon");
         filterChainDefinitionMap.put("/user/add", "anon");
+        filterChainDefinitionMap.put("/user/findPasswd", "anon");
+        filterChainDefinitionMap.put("/user/resetPasswd", "anon");
 
         filterChainDefinitionMap.put("/logout", "logout");
 
@@ -93,5 +96,13 @@ public class ShiroConfig {
         AuthorizationAttributeSourceAdvisor sourceAdvisor = new AuthorizationAttributeSourceAdvisor();
         sourceAdvisor.setSecurityManager(defaultSecurityManager());
         return sourceAdvisor;
+    }
+
+    /**
+     * 前端shiro整合
+     * */
+    @Bean
+    public ShiroDialect shiroDialect() {
+        return new ShiroDialect();
     }
 }

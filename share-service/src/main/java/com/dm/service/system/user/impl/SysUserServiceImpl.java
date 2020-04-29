@@ -32,12 +32,9 @@ public class SysUserServiceImpl implements ISysUserService {
      * @param uer 待添加对象
      * @return int  添加成功条数
      */
-    @Transactional
     @Override
     public int addUser(SysUser uer) {
-        int i = userMapper.addUser(uer);
-        int j = 1/0;
-        return i;
+        return userMapper.addUser(uer);
     }
 
     /**
@@ -172,5 +169,38 @@ public class SysUserServiceImpl implements ISysUserService {
         }else {
             return AuthToken.unauth("用户名相同，重新输入", null);
         }
+    }
+
+    /**
+     * 用户登录服务
+     *
+     * @param uniqueParam
+     */
+    @Override
+    public AuthToken login(String uniqueParam) {
+        /*SysUser sysUser = userMapper.findUnique(uniqueParam);
+        if (sysUser == null) {
+            return AuthToken.unauth(GlobalConstant.LOGIN_ACCOUNT_NOT_REGISTER, null);
+        }else {
+            //存在该用户，检查账户状态
+            char status = sysUser.getStatus();
+            if (status == AccountType.LOCKED.getStatus()) {
+                return AuthToken.unauth(GlobalConstant.LOGIN_ACCOUNT_LOCKED, null);
+            }
+            if (status == AccountType.INVALID.getStatus()) {
+                return AuthToken.unauth(GlobalConstant.LOGIN_ACCOUNT_INVALID);
+            }
+            //存在该用户，检查角色状态
+
+            //存在该用户，则进行密码匹配
+            String password = sysUser.getPassword();
+            String md5WithSalt = MD5.MD5WithSalt(password, user.getPassword(), MD5ProcessType.LOGIN);
+            //md5WithSalt不可能为null
+            if (!md5WithSalt.equals(password)) {
+                return AuthToken.unauth(GlobalConstant.LOGIN_ACCOUNT_ERROR, null);
+            }
+            return AuthToken.auth(GlobalConstant.LOGIN_SUCCESS, sysUser);
+        }*/
+        return null;
     }
 }

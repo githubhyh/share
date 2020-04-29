@@ -74,4 +74,24 @@
     <select id="findByLoginName" parameterType="java.lang.String" resultMap="SysUserResult">
         select * from sys_user where login_name = #{name}
     </select>
+
+    <!-- find by user email -->
+    <select id="findByEmail" parameterType="java.lang.String" resultMap="SysUserResult">
+        select * from sys_user where email = #{email}
+    </select>
+
+    <!-- find by user phone number -->
+    <select id="findByPhoneNumber" parameterType="java.lang.String" resultMap="SysUserResult">
+        select * from sys_user where phonenumber = #{phoneNumber}
+    </select>
+
+    <!-- find unique user -->
+    <select id="findUnique" parameterType="java.lang.String" resultMap="SysUserResult">
+        select * from sys_user
+        <where>
+            <if test="uniqueParam != null and uniqueParam != ''">or loginName = #{uniqueParam}</if>
+            <if test="uniqueParam != null and uniqueParam != ''">or email = #{uniqueParam}</if>
+            <if test="uniqueParam != null and uniqueParam != ''">or phonenumber = #{uniqueParam}</if>
+        </where>
+    </select>
 </mapper>

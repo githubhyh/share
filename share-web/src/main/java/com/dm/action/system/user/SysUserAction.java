@@ -4,10 +4,12 @@ import com.dm.beans.AuthToken;
 import com.dm.domain.system.user.SysUser;
 import com.dm.exception.runtime.NoSuchTypeException;
 import com.dm.service.system.user.ISysUserService;
+import com.dm.test.TestService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,8 +22,13 @@ import javax.servlet.http.HttpServletRequest;
 public class SysUserAction {
     private static final Logger logger = LoggerFactory.getLogger(SysUserAction.class);
 
+    private String prefix = "system/user/passwd";
+
     @Autowired
     private ISysUserService sysUserService;
+
+    @Autowired
+    private TestService service;
 
     @GetMapping("/register")
     public String register() {
@@ -30,7 +37,12 @@ public class SysUserAction {
 
     @PostMapping("/add")
     @ResponseBody
-    public AuthToken add(SysUser user, HttpServletRequest request) throws NoSuchTypeException {
-        return sysUserService.register(user);
+    public AuthToken add(SysUser user, HttpServletRequest request) {
+        return service.register(user);
+    }
+
+    @GetMapping("/findPasswd")
+    public String findPasswd() {
+        return prefix + "/findpasswd";
     }
 }

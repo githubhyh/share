@@ -34,6 +34,7 @@
     <spring-mybatis>2.1.1</spring-mybatis>
     <spring-thymeleaf>2.1.8.RELEASE</spring-thymeleaf>
     <spring-shiro>1.5.1</spring-shiro>
+    <thymeleaf-extras-shiro>2.0.0</thymeleaf-extras-shiro>
   </properties>
 
   <dependencies>
@@ -42,6 +43,13 @@
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.github.theborakompanioni/thymeleaf-extras-shiro -->
+    <dependency>
+      <groupId>com.github.theborakompanioni</groupId>
+      <artifactId>thymeleaf-extras-shiro</artifactId>
+      <version>${thymeleaf-extras-shiro}</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-pool2 -->
@@ -72,12 +80,13 @@
       <version>${mysql-jdbc-version}</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-jdbc -->
     <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-jdbc</artifactId>
-      <version>${spring-jdbc}</version>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-jdbc</artifactId>
+      <version>${spring-boot-version}</version>
     </dependency>
+
 
     <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
     <dependency>
@@ -145,7 +154,6 @@
   </dependencies>
 
   <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
@@ -187,6 +195,5 @@
           <version>3.0.0</version>
         </plugin>
       </plugins>
-    </pluginManagement>
   </build>
 </project>
