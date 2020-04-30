@@ -9,8 +9,12 @@
         <module name="shareservice" />
         <module name="sharecommon" />
         <module name="shareweb" />
+        <module name="share-web" />
         <module name="shareframework" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="shareweb" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

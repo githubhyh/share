@@ -13,6 +13,11 @@ import org.springframework.transaction.TransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 
+/**
+ * @author hu.yuhao
+ * @date 2020-04-30
+ * 多余配置（可以自定义事务管理器）
+ * */
 @Configuration
 @PropertySource("application-dev.yml")
 @EnableTransactionManagement

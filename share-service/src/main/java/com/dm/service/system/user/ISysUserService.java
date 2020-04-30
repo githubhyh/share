@@ -64,6 +64,11 @@ public interface ISysUserService {
      * */
     SysUser findByLoginName(String name);
 
+    /**
+     * 根据唯一字段查找
+     * */
+    SysUser findByLoginID(String loginID);
+
 
     ///////////////以下定制服务///////////////
     /**

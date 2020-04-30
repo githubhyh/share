@@ -1,0 +1,7 @@
+com\dm\domain\BaseEntity.class
+com\dm\test\TestService.class
+com\dm\service\system\user\ISysUserService.class
+com\dm\validate\JdbcTransactionManagerConfig.class
+com\dm\mapper\system\user\SysUserMapper.class
+com\dm\service\system\user\impl\SysUserServiceImpl.class
+com\dm\domain\system\user\SysUser.class

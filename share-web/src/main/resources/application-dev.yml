@@ -16,7 +16,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
-    url: jdbc:mysql://127.0.0.1:3306/huyuhao?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://129.204.240.8:3306/huyuhao?useSSL=false&serverTimezone=UTC
     initial-size: 10
     max-active: 20
     min-idle: 5
@@ -24,15 +24,16 @@ spring:
     filter:
       stat:
         enabled: true
-        slow-sql-millis: 1000
-        merge-sql: true
-        log-slow-sql: true
-      wall:
+        slow-sql-millis: 1000 #慢sql判断值
+        merge-sql: true #合并sql，避免相同sql重复打印
+        log-slow-sql: true  #慢sql记录
+      wall: #防止sql注入攻击配置
         config:
           multi-statement-allow: true
   #config redis
   redis:
-    host: 127.0.0.1
+    host: 129.204.240.8
+    port: 6379
     password: 123456
     database: 0
     jedis:

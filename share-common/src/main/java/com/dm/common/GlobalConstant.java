@@ -24,4 +24,11 @@ public class GlobalConstant {
 
     //shiro session redis key prefix
     public static String PREFIX_OF_REDIS_SESSION_KEY    =   "SHIRO_REDIS_SESSION_KEY:";
+
+    //邮件服务器和发送人设置
+    public static String SMTP_SERVER                    =   "smtp.163.com";
+    public static String USERNAME                       =   "15907227396@163.com";
+    public static String PASSWORD                       =   "RVTCBNXDAHFAXZZX";
+    public static String PROTOCOL                       =   "smtp";
+    public static String FROM                           =   "15907227396@163.com";
 }

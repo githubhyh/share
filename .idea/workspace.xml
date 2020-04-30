@@ -2,27 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5bec4ee-436b-4935-a1a4-18de60a2f1ec" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-framework/src/main/java/com/dm/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-framework/src/main/java/com/dm/config/ShiroConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-framework/target/classes/com/dm/config/ShiroConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/share-framework/target/classes/com/dm/config/ShiroConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/share-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-common/src/main/java/com/dm/common/GlobalConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-common/src/main/java/com/dm/common/GlobalConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-common/target/classes/com/dm/common/GlobalConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/share-common/target/classes/com/dm/common/GlobalConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-framework/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/share-framework/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-framework/src/main/java/com/dm/shiro/realm/UserRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-framework/src/main/java/com/dm/shiro/realm/UserRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-framework/target/classes/com/dm/shiro/realm/UserRealm.class" beforeDir="false" afterPath="$PROJECT_DIR$/share-framework/target/classes/com/dm/shiro/realm/UserRealm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-service/src/main/java/com/dm/domain/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/src/main/java/com/dm/domain/BaseEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-service/src/main/java/com/dm/mapper/system/user/SysUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/src/main/java/com/dm/mapper/system/user/SysUserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-service/src/main/java/com/dm/service/system/user/ISysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/src/main/java/com/dm/service/system/user/ISysUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-service/src/main/java/com/dm/service/system/user/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/src/main/java/com/dm/service/system/user/impl/SysUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-service/src/main/java/com/dm/validate/JdbcTransactionManagerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/src/main/java/com/dm/validate/JdbcTransactionManagerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-service/src/main/resources/mapper/system/user/SysUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/src/main/resources/mapper/system/user/SysUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-service/target/classes/META-INF/shareservice.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-service/target/classes/com/dm/domain/BaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/target/classes/com/dm/domain/BaseEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-service/target/classes/com/dm/mapper/system/user/SysUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/target/classes/com/dm/mapper/system/user/SysUserMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-service/target/classes/com/dm/service/system/user/ISysUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/target/classes/com/dm/service/system/user/ISysUserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-service/target/classes/com/dm/service/system/user/impl/SysUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/target/classes/com/dm/service/system/user/impl/SysUserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-web/src/main/java/com/dm/action/system/user/SysUserAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/src/main/java/com/dm/action/system/user/SysUserAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-service/target/classes/mapper/system/user/SysUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/share-service/target/classes/mapper/system/user/SysUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-web/src/main/java/com/dm/action/system/user/SysUserLoginAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/src/main/java/com/dm/action/system/user/SysUserLoginAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-web/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-web/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-web/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-web/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/src/main/resources/templates/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-web/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/target/classes/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-web/target/classes/com/dm/action/system/user/SysUserAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/target/classes/com/dm/action/system/user/SysUserAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-web/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/share-web/target/classes/com/dm/action/system/user/SysUserLoginAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/target/classes/com/dm/action/system/user/SysUserLoginAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share-web/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/target/classes/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share-web/target/classes/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/share-web/target/classes/templates/register.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,8 +40,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -101,13 +107,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringApplication">
+  <component name="RunManager" selected="Application.JavaMailUtils">
     <configuration name="AuthToken" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.dm.beans.AuthToken" />
       <module name="sharecommon" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.dm.beans.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JavaMailUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dm.utils.JavaMailUtils" />
+      <module name="sharecommon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dm.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,6 +149,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JavaMailUtils" />
         <item itemvalue="Spring Boot.SpringApplication" />
         <item itemvalue="Application.AuthToken" />
       </list>
@@ -145,7 +165,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587707336180</updated>
-      <workItem from="1587707339048" duration="71394000" />
+      <workItem from="1587707339048" duration="84840000" />
     </task>
     <servers />
   </component>

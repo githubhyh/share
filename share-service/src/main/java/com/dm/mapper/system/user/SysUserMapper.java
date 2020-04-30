@@ -30,6 +30,8 @@ public interface SysUserMapper {
 
     SysUser findByLoginName(@Param("name") String name);
 
+    SysUser findByLoginID(@Param("loginID") String loginID);
+
     /**
      * 邮箱登录
      * */

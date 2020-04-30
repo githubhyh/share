@@ -16,7 +16,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
-    url: jdbc:mysql://127.0.0.1:3306/huyuhao?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://129.204.240.8:3306/huyuhao?useSSL=false&serverTimezone=UTC
     initial-size: 10
     max-active: 20
     min-idle: 5
@@ -32,7 +32,8 @@ spring:
           multi-statement-allow: true
   #config redis
   redis:
-    host: 127.0.0.1
+    host: 129.204.240.8
+    port: 6379
     password: 123456
     database: 0
     jedis:

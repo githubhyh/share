@@ -35,7 +35,7 @@ public class SysUserLoginAction extends BaseAction {
     @ResponseBody
     public AuthToken login(SysUser user, HttpServletRequest request) {
         UsernamePasswordToken token = new UsernamePasswordToken();
-        token.setUsername(user.getLoginName());
+        token.setUsername(user.getLoginID());
         token.setPassword(user.getPassword().toCharArray());
         Subject subject = SecurityUtils.getSubject();
         subject.login(token);

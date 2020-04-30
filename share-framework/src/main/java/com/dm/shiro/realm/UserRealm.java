@@ -49,7 +49,7 @@ public class UserRealm extends AuthorizingRealm {
         String username = token.getUsername();
         char[] password = token.getPassword();
         SysUser sysUser = new SysUser();
-        sysUser.setLoginName(username);
+        sysUser.setLoginID(username);
         sysUser.setPassword(new String(password));
         AuthToken loginToken = sysUserService.login(sysUser);
         try {

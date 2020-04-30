@@ -89,9 +89,18 @@
     <select id="findUnique" parameterType="java.lang.String" resultMap="SysUserResult">
         select * from sys_user
         <where>
-            <if test="uniqueParam != null and uniqueParam != ''">or loginName = #{uniqueParam}</if>
+            <if test="uniqueParam != null and uniqueParam != ''">or login_name = #{uniqueParam}</if>
             <if test="uniqueParam != null and uniqueParam != ''">or email = #{uniqueParam}</if>
             <if test="uniqueParam != null and uniqueParam != ''">or phonenumber = #{uniqueParam}</if>
+        </where>
+    </select>
+
+    <select id="findByLoginID" parameterType="java.lang.String" resultMap="SysUserResult">
+        select * from sys_user
+        <where>
+            <if test="loginID != null and loginID != ''">or login_name = #{loginID}</if>
+            <if test="loginID != null and loginID != ''">or email = #{loginID}</if>
+            <if test="loginID != null and loginID != ''">or phonenumber = #{loginID}</if>
         </where>
     </select>
 </mapper>

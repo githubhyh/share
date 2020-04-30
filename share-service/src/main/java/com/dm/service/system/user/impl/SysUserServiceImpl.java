@@ -115,6 +115,16 @@ public class SysUserServiceImpl implements ISysUserService {
     }
 
     /**
+     * 根据唯一字段查找
+     *
+     * @param loginID
+     */
+    @Override
+    public SysUser findByLoginID(String loginID) {
+        return userMapper.findByLoginID(loginID);
+    }
+
+    /**
      * 用户登录服务
      *
      * @param user 用户登录信息
@@ -122,7 +132,8 @@ public class SysUserServiceImpl implements ISysUserService {
      */
     @Override
     public AuthToken login(SysUser user) {
-        SysUser sysUser = findByLoginName(user.getLoginName());
+        //SysUser sysUser = findByLoginName(user.getLoginName());
+        SysUser sysUser = findByLoginID(user.getLoginID());
         if (sysUser == null) {
             return AuthToken.unauth(GlobalConstant.LOGIN_ACCOUNT_NOT_REGISTER, null);
         }else {
